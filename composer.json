@@ -1,0 +1,14 @@
+{
+    "name": "punktde/behat-file",
+    "description": "Package for testing generated files with behat",
+    "require": {
+        "behat/behat": "^3.4",
+        "phpunit/phpunit": "*",
+        "punktde/behat-database": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "PunktDe\\Behat\\File\\": "Classes"
+        }
+    }
+}
