@@ -150,4 +150,18 @@ class FileContext implements Context
         $fileSize = filesize(Files::concatenatePaths(array($this->featureBasePath, $fileName)));
         Assert::assertSame(intval($expectedSize), $fileSize, $message = '');
     }
+
+
+    /**
+     * @When I empty directory :folderPath
+     */
+    public function emptyDirectory($folderPath)
+    {
+        $folderPath = $this->featureBasePath . '/' . $folderPath;
+        if (is_dir($folderPath)) {
+            Files::emptyDirectoryRecursively($folderPath);
+        }
+    }
+
+
 }
