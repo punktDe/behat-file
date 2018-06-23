@@ -3,7 +3,7 @@
     "description": "Package for testing generated files with behat",
     "require": {
         "behat/behat": "^3.3",
-        "neos/utility-files": "^4.3",
+        "neos/utility-files": ">= 4.3",
         "phpunit/phpunit": "*",
         "punktde/behat-database": "*"
     },
