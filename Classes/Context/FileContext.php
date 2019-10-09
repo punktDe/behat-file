@@ -117,7 +117,8 @@ class FileContext implements Context
     {
         $expectedFileContentWithMarkers = file_get_contents($this->buildAbsolutePath($expectedFile));
         $expectedFileContent = $this->replacement->replaceMarkers($expectedFileContentWithMarkers);
-        Assert::assertStringEqualsFile($this->buildAbsolutePath($actualFile), $expectedFileContent);
+        $actualFileContent = file_get_contents($this->buildAbsolutePath($actualFile));
+        Assert::assertEquals($expectedFileContent, $actualFileContent);
     }
 
     /**
